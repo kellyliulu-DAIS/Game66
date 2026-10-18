@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hud">
+      <h1>贪吃蛇</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="label">分数</span>
+          <span id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">最高</span>
+          <span id="high-score">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">速度</span>
+          <span id="speed">1</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="board-wrap">
+      <canvas id="board" width="480" height="480" aria-label="贪吃蛇游戏区域"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title">贪吃蛇</p>
+        <p id="overlay-sub">方向键 / WASD 控制 · 空格暂停</p>
+        <button id="start-btn" type="button">开始游戏</button>
+      </div>
+    </section>
+
+    <footer class="help">
+      <p>吃到食物得分，撞墙或咬到自己会结束。分数越高速度越快。</p>
+      <div class="dpad" aria-hidden="true">
+        <button data-dir="up" type="button">↑</button>
+        <div class="row">
+          <button data-dir="left" type="button">←</button>
+          <button data-dir="down" type="button">↓</button>
+          <button data-dir="right" type="button">→</button>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
